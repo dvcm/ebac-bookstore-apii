@@ -6,11 +6,9 @@ authors = ["Patrick Passarella <pshaggy@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-
-[tool.poetry.group.dev.dependencies]
-paramiko = "^3.1.0"
-python-dotenv = "^1.0.0"
+python = "^3.7"
+whitenoise = "^6.4.0"
+gunicorn = "^20.1.0"
 
 [build-system]
 requires = ["poetry-core"]
