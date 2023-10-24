@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("d3eee0c7c84bf86d172f3c9357f27f1012da246d7a1eacdc")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['ebac-bookstore-apii.herokuapp.com', '127.0.0.1']
 
 # Application definition
 

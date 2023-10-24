@@ -1,0 +1,40 @@
+I have dockerized a django project and it runs on my local mashine with $dcoker run ,i uploaded the project on heroku and run bellow commands :
+
+$ heroku container:login
+$ heroku container:push web
+$ heroku container:release web
+so when i opened the address https://docker-on-test.herokuapp.com/ on browser i got the Application error and after heroku logs --tail i realized this is the error i have :
+
+=== Fetching app code
+
+=!= There were problems parsing your heroku.yml. We've detected the following issues:
+
+ in body must be of type object: "null"
+this is Dockerfile :
+
+    RUN mkdir /code
+    WORKDIR /code
+    ADD . /code/
+    RUN python -m pip install --upgrade pip
+    RUN pip3 install -r requiremenrs.txt
+    RUN python manage.py migrate
+    CMD ["python3","manage.py", "runserver","0.0.0.0:8000"]
+docker-compose.yml :
+
+version: '3'
+services:
+  web:
+    build: .
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: code
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+and heroku.yml :
+
+build:
+  docker:
+    web: Dockerfile
+run:
+  web:
