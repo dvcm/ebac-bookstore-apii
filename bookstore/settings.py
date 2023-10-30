@@ -162,4 +162,4 @@ INTERNAL_IPS = [
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-apii.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-apii.herokuapp.com','http://pshaggy.pythonanywhere.com/']
