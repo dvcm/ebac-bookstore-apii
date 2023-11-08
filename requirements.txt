@@ -1,5 +1,0 @@
-# Editable Git install (bookstore==0.1.9) with either a deleted local remote or invalid URI:
-# 'git@github.com:/dvcm/ebac-bookstore-apii.git'
--e /home/ebac/Desktop/ebac-bookstore-apii
-gunicorn==20.1.0
-whitenoise==6.6.0
