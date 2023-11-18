@@ -8,6 +8,7 @@ Bookstore APP from Backend Python course from EBAC
 Python 3.5>
 Poetry
 Docker && docker-compose
+
 ```
 
 ## Quickstart
@@ -15,7 +16,7 @@ Docker && docker-compose
 1. Clone this project
 
    ```shell
-   git clone git@github.com:dvcm/bookstore.git
+   git clone git@github.com:drsantos20/bookstore.git
    ```
 
 2. Install dependencies:
@@ -31,7 +32,7 @@ Docker && docker-compose
    poetry run manage.py migrate
    poetry run python manage.py runserver
    ```
-
+   
 4. Run docker dev server environment:
 
    ```shell
@@ -43,3 +44,7 @@ Docker && docker-compose
 
    ```shell
    docker-compose exec web python manage.py test
+   ```
+
+
+
